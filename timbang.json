@@ -1,0 +1,50 @@
+{
+    "pageFormat": {
+        "pageWidth": 80,                                                   
+        "pageLength": 33, 
+        "LeftMargin" :5,                                              
+        "usePageLengthFromPrinter": false                                  
+    },
+    "template": {
+        "header": [
+            "",
+            "",
+            " %{BOLD}${headertext:79:right}%{BOLD}", 
+            " -------------------------------------------------------------------------------"
+            
+        ],
+        "detail": [
+            " NO.SERIAL       : %{BOLD}${notiket:20}%{BOLD}",
+            " LORRY NO        : %{BOLD}${nobk:20}%{BOLD}",
+            " CUSTOMER        : %{BOLD}${customer:50}%{BOLD}",
+            " PRODUCT         : %{BOLD}${product:50}%{BOLD}",
+            " TRANSPORTER     : ${trans:20}",
+            " No.SIM          : ${sim:20}",
+            " D/O NO.         : ${nodo:20}",
+            " SUPPLIER WEIGHT : ${suppweigh:20:RIGHT}",
+            " DATE/TIME IN    : %{BOLD}${tgl1:10}/${jam1:8}%{BOLD}                       %{BOLD}${firtWeight:19:RIGHT}%{BOLD}",
+            " DATE/TIME OUT   : %{BOLD}${tgl2:10}/${jam2:8}%{BOLD}                       %{BOLD}${secondWeight:19:RIGHT}%{BOLD}",
+            " -------------------------------------------------------------------------------",
+            "                                           GROSS WEIGHT    : %{BOLD}${grossWeight:19:RIGHT}%{BOLD}",
+            "  POTONGAN  :   %{BOLD}${deducPersen:19:RIGHT}%{BOLD}        TOTAL DEDUCTION : %{BOLD}${deducWeight:19:RIGHT}%{BOLD}",
+            "                                                           ---------------------",
+            "                                           NETTO WEIGHT    : %{BOLD}${nettoWeight:19:RIGHT}%{BOLD}",
+            "",
+            "",
+            
+            "","",
+            "   ${nama:25}${supir:25}",
+            "   -----------------        ----------------",
+            "   Weigh BY                 Transport By",
+             {
+                    "table": "table_source",
+                    "border": false,
+                    "columns": [
+                        {"source": "", "width": 42 },
+                        {"caption": "%{UNDERLINE}Remarks:%{UNDERLINE}" ,"source": "Remarks", "width": 38,  "wrap": true }
+                    ]
+                },
+            ""           
+        ]
+    }
+}
